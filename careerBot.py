@@ -4,14 +4,13 @@ import requests
 import json
 
 if "GEMINI_API_KEY" in st.secrets:
-    API_KEY = st.secrets["GEMINI_API_KEY"]
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 else:
     from dotenv import load_dotenv
     load_dotenv()
-    API_KEY = os.environ["GEMINI_API_KEY"]
+    GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 # ========== CONFIGURE YOUR GEMINI API KEY ==========
-GEMINI_API_KEY = os.getenv("API_KEY")  # Replace with your actual key
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
 
 # ========== GET CAREER ADVICE FUNCTION ==========
