@@ -2,7 +2,7 @@
 
 ## 🚀 Overview
 
-**Career Guidance Chatbot** is a Generative AI-powered Streamlit web app developed during the **GenAI Foundation Program**. It helps users explore personalized, future-ready career options based on their **skills, interests, and education background** using Google’s **Gemini 2.0 Flash API**. Ideal for students, professionals, or anyone exploring new career paths.
+**Career Guidance Chatbot** is a Generative AI-powered [Streamlit](https://streamlit.io/) web app developed during the **GenAI Foundation Program**. It helps users explore personalized, future-ready career options based on their **skills, interests, and education background** using Google’s **Gemini 2.0 Flash API**. Ideal for students, professionals, or anyone exploring new career paths.
 
 ## ✨ Key Features
 
@@ -35,24 +35,29 @@
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/CareerGuidanceChatBot.git
+   git clone https://github.com/jeevandeepsaini/CareerGuidanceChatBot.git
    cd CareerGuidanceChatBot
+   ```
 2. Create and activate a virtual environment:
    ```sh
     python -m venv .venv
     .venv\Scripts\activate  # On Windows
     # or
     source .venv/bin/activate  # On macOS/Linux
+   ```
 3. Install dependencies:
     ```sh
     pip install python-dotenv streamlit
+    ```
 4. Create a `.env` file in the root with your Gemini API key:
     ```sh
-    API_KEY=GEMINI_CREDENTIAL_KEY
+    GEMINI_API_KEY=your_gemini_key_here
+    ```
 5. Run the app:
    ```sh
    streamlit run careerBot.py
-
+   ```
+   
 ## 🛠️ Tech Stack
 
 - **Language:** Python
@@ -66,3 +71,10 @@
 - ✅ Uses .env for API key security (never exposed in code).
 - ✅ Ideal for local or internal educational/counseling use.
 
+## 📝 License
+
+This project is licensed under the **MIT License** – feel free to use and modify it.
+
+## 🔎 Additional Notes
+
+This project integrates with the [Gemini API (Google Generative Language API)](https://ai.google.com/). To use this software, you must obtain your own API key and ensure compliance with [Google’s API usage terms](https://ai.google.dev/gemini-api/terms). API keys are not included in this repository for security reasons.
