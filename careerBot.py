@@ -2,13 +2,17 @@ import os
 import streamlit as st
 import requests
 import json
+from dotenv import load_dotenv
 
 if "GEMINI_API_KEY" in st.secrets:
     GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 else:
-    from dotenv import load_dotenv
     load_dotenv()
-    GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+if not GEMINI_API_KEY:
+    st.error("❌ API Key not found. Please check .env file or Streamlit secrets.")
+    st.stop()
 
 # ========== CONFIGURE YOUR GEMINI API KEY ==========
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"

@@ -31,6 +31,7 @@ env/
 # ========================================
 # Streamlit
 # ========================================
+.streamlit/
 .streamlit/config.toml
 .streamlit/secrets.toml
 
@@ -59,7 +60,6 @@ $RECYCLE.BIN/
 
 # ========================================
 # Environment Variables or Sensitive Info
-.env
 .env.*
 
 # ========================================
@@ -74,7 +74,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.log
 *.test
 
 # ========================================
