@@ -10,7 +10,7 @@
 - **Bold Titles with Rich Descriptions** – Clear, insightful summaries for each career.
 - **Clickable Resource Links** – Explore careers further with trusted sources.
 - **Session History** – Review your past queries and AI responses.
-- **Secure API Key Handling** – Uses `.env` for private configuration.
+- **Secure API Key Handling** – Uses `.env` locally or `secrets.toml` when deployed on Streamlit Cloud.
 - **Modern, Clean UI** – Streamlit-based layout with responsive design.
 
 ## 📌 How It Works
@@ -47,7 +47,9 @@
    ```
 3. Install dependencies:
     ```sh
-    pip install python-dotenv streamlit
+    pip install python-dotenv streamlit requests
+    #or
+    pip install -r requirments.txt
     ```
 4. Create a `.env` file in the root with your Gemini API key:
     ```sh
