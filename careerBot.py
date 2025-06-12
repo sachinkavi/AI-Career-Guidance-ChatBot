@@ -2,9 +2,13 @@ import os
 import streamlit as st
 import requests
 import json
-from dotenv import load_dotenv
 
-load_dotenv()
+if "GEMINI_API_KEY" in st.secrets:
+    API_KEY = st.secrets["GEMINI_API_KEY"]
+else:
+    from dotenv import load_dotenv
+    load_dotenv()
+    API_KEY = os.environ["GEMINI_API_KEY"]
 
 # ========== CONFIGURE YOUR GEMINI API KEY ==========
 GEMINI_API_KEY = os.getenv("API_KEY")  # Replace with your actual key
